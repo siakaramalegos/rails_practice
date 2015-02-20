@@ -4,7 +4,8 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    @songs = Song.all.order("name")
+    @artist = Artist.where(id: params[:artist_id], name: params[:name])
   end
 
   # GET /songs/1

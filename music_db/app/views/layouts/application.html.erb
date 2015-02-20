@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class = "container">
+    <%= yield %>
 
-<%= yield %>
+    <br><br>
 
+    <%= link_to 'Genres', genres_path %>
+    <%= link_to 'Artists', artists_path %>
+    <%= link_to 'Songs', songs_path %>
+  </div>
 </body>
 </html>

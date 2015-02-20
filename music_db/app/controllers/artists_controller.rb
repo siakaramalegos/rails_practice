@@ -4,9 +4,9 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all
-    #@genres = Genre.all
-    #@genre = Genre.find(params[:genre_id])
+    @artists = Artist.all.
+      order("name")
+    @genre = Genre.where(id: params[:genre_id], name: params[:name])
   end
 
   # GET /artists/1
