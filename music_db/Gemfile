@@ -39,6 +39,7 @@ gem 'stamp'
 # Don't want WEBrick
 gem 'thin'
 
+# This gem allows us to pull in Bootswatch themes
 gem 'starter_generators'
 
 group :development, :test do
