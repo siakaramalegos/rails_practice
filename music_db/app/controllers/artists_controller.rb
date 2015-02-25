@@ -6,7 +6,6 @@ class ArtistsController < ApplicationController
   def index
     @artists = Artist.all.
       order("name")
-    @genre = Genre.where(id: params[:genre_id], name: params[:name])
   end
 
   # GET /artists/1
