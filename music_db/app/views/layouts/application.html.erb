@@ -43,6 +43,10 @@
         <li><%= link_to "Songs", songs_url %></li>
         <li><a href="#">About</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%= render 'devise/menu/registration_items' %>
+        <%= render 'devise/menu/login_items' %>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
 
@@ -54,7 +58,12 @@
       </div>
     <% end %>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
   </div>
+
 </body>
 </html>
