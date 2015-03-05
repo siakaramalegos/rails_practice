@@ -29,6 +29,7 @@ class ArtistsController < ApplicationController
   # POST /artists.json
   def create
     @artist = Artist.new(artist_params)
+    @genres = Genre.all
 
     respond_to do |format|
       if @artist.save
