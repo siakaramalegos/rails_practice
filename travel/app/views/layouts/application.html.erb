@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>Travel</title>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" %>
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" %>
+  <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <%= link_to "Travel", root_path, class: "navbar-brand" %>
+</div>
+
+<div class="container">
+  <%= yield %>
+  <%= link_to "About", about_path %>
+</div>
+
 
 </body>
 </html>
