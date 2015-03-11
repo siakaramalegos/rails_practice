@@ -5,5 +5,13 @@
   <%= @genre.name %>
 </p>
 
+Artists in the <%= @genre.name %> genre include:
+
+<ul>
+  <% @genre.artists.each do |artist| %>
+  <li><%= link_to artist.name, artist_path(artist) %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>

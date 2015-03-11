@@ -10,5 +10,12 @@
   <%= @artist.genre_id %>
 </p>
 
+Songs by <%= @artist.name %> include:
+<ul>
+  <% @artist.songs.each do |song| %>
+  <li><%= song.name %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
